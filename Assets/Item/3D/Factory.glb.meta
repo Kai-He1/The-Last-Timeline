@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 668f7d7a59ff286498c69ac1b49eedbb
+guid: bbdb4cebdf12fc740b6b8f3e0f66e575
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -26,7 +26,7 @@ ScriptedImporter:
     sceneObjectCreation: 2
   assetDependencies: []
   reportItems:
-  - type: 0
+  - type: 2
     code: 20
     messages:
-    - EXT_texture_webp
+    - KHR_materials_specular
