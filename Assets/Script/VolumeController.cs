@@ -14,15 +14,11 @@ public class VolumeController : MonoBehaviour
 
         if (musicSlider != null && audioSource != null)
         {
-            // 【修改部分】2. 初始化：优先从本地读取保存的音量，如果没有保存过，则默认使用当前音乐的音量
-            float defaultVolume = audioSource.volume;
-            float savedVolume = PlayerPrefs.GetFloat("MusicVolume", defaultVolume);
-
-            // 让滑动条位置和实际音量都等于读取到的音量数值
-            musicSlider.value = savedVolume;
-            audioSource.volume = savedVolume;
+            // 2. 初始化：让滑动条的默认位置等于当前音乐的音量大小
+            musicSlider.value = audioSource.volume;
 
             // 3. 核心：用代码监听滑动条的实时数值变化
+            // 当滑动条被拖动时，会自动触发下面的 OnSliderValueChanged 方法
             musicSlider.onValueChanged.AddListener(OnSliderValueChanged);
         }
     }
@@ -34,10 +30,6 @@ public class VolumeController : MonoBehaviour
         {
             // 将滑动条的数值（0.0 ~ 1.0）直接赋值给音频的音量
             audioSource.volume = value;
-
-            // 【添加部分】将当前音量实时保存在玩家的本地电脑/手机上
-            PlayerPrefs.SetFloat("MusicVolume", value);
-            PlayerPrefs.Save(); // 确认保存
         }
     }
 
