@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.cloud.gltfast": "6.19.0",
     "com.unity.feature.2d": "2.0.2",
     "com.unity.feature.characters-animation": "1.0.0",
     "com.unity.multiplayer.center": "1.0.1",
