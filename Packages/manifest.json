@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.netpyoung.webp": "https://github.com/netpyoung/unity.webp.git?path=unity_project/Assets/unity.webp#0.3.22",
     "com.unity.cloud.gltfast": "6.19.0",
     "com.unity.feature.2d": "2.0.2",
     "com.unity.feature.characters-animation": "1.0.0",
